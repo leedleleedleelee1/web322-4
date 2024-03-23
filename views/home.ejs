@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Lego Collection</title>
+</head>
+<body>
+    <%- include('partials/navbar', {page: '/home'}) %>
+
+    <div class="container mx-auto my-8">
+        <div class="bg-blue-200 p-4 rounded-lg">
+            <h1 class="text-4xl font-semibold mb-4">Explore the Lego Collection</h1>
+            <a href="/lego/sets" class="btn">View All Sets</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="/lego1.jpg" alt="Lego Set 1">
+                <h2 class="text-xl font-semibold my-2">Gears</h2>
+                <p class="text-gray-600">This set was released in America (USA/CAN) by Samsonite in 1965..</p>
+                <a href="/lego/sets/001-1" class="btn mt-2">View Set</a>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="/lego2.jpg" alt="Lego Set 2">
+                <h2 class="text-xl font-semibold my-2">Nursey Furniture</h2>
+                <p class="text-gray-600">Classic Duplo set - create a nursery for your minis.</p>
+                <a href="/lego/sets/002-1" class="btn mt-2">View Set</a>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <img src="/lego3.jpg" alt="Lego Set 3">
+                <h2 class="text-xl font-semibold my-2">The Race To Build It Board Game</h2>
+                <p class="text-gray-600">Classic game - released in 1999</p>
+                <a href="/lego/sets/003-1" class="btn mt-2">View Set</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
