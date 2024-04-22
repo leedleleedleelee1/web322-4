@@ -1,0 +1,34 @@
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <a class="btn btn-ghost normal-case text-xl" href="/">Lego Collection</a>
+  </div>
+  <div class="navbar-end">
+    <ul class="menu menu-horizontal p-0">
+      <li><a class="<%= (page == "/lego/sets") ? 'active' : '' %>" href="/lego/sets">View Collection</a></li>
+      <% if (session && session.user) { %>
+        <li><a class="<%= (page == "/lego/addSet") ? 'active' : '' %>" href="/lego/addSet">Add to Collection</a></li>
+      <% } %>
+      <li><a class="<%= (page == "/about") ? 'active' : '' %>" href="/about">About</a></li>
+      <li class="dropdown dropdown-end">
+        <details>
+          <summary class="btn btn-ghost">
+            <% if (session && session.user) { %>
+              Account: <%= session.user.userName %>
+            <% } else { %>
+              Account
+            <% } %>
+          </summary>
+          <ul class="menu menu-compact dropdown-content p-2 shadow bg-base-100 rounded-box w-52">
+            <% if (session && session.user) { %>
+              <li><a class="<%= (page == "/userHistory") ? 'active' : '' %>" href="/userHistory">User History</a></li>
+              <li><a href="/logout">Log Out</a></li>
+            <% } else { %>
+              <li><a class="<%= (page == "/login") ? 'active' : '' %>" href="/login">Login</a></li>
+              <li><a class="<%= (page == "/register") ? 'active' : '' %>" href="/register">Register</a></li>
+            <% } %>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>
